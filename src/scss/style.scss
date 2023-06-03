@@ -1,0 +1,98 @@
+// это импорты пп
+@import "./zero";
+@import "./variables";
+@import "./mixins";
+
+$fon-color: rgb(211, 211, 211);
+
+// прижимаем footer к низу
+.main {
+	//background-color: $fon-color;
+	flex-grow: 1;
+}
+
+._ibg {
+	position: relative;
+
+	& img {
+		object-fit: cover;
+		object-position: left;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+	& .block__item-icon {
+		//object-fit: cover;
+		object-position: center;
+		position: absolute;
+		width: 25%;
+		height: 25%;
+		top: 35%;
+		left: 35%;
+		filter: drop-shadow(0px 0px 4px rgb(0 0 0 / 0.7)) drop-shadow(1px 1px 4px rgb(0 0 0 / 0.7)) drop-shadow(-1px -1px 4px rgb(0 0 0 / 0.7));
+	}
+}
+
+.block-bg {
+	filter: blur(4px);
+	opacity: 0.8;
+	z-index: -1;
+}
+
+[class*="__container"] {
+	// 1100 + 15 + 15
+	max-width: 1030px;
+	margin: 0px auto;
+	padding: 0px 15px;
+}
+
+.block {
+	height: 100vh;
+	display: flex;
+	// .block__items
+	&__title {
+		text-align: center;
+		font-size: 4rem;
+		color: orange;
+		margin-bottom: 20px;
+		filter: drop-shadow(3px 3px rgb(0 0 0 / 0.6)) drop-shadow(1px 2px $fon-color);
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		//align-items: center;
+		align-self: center;
+		//flex-grow: 1;
+		width: 100%;
+	}
+	&__item-bg {
+		//opacity: 0.75;
+	}
+	&__items {
+		display: flex;
+		justify-content: center;
+		gap: 5%;
+	}
+	// .block__item
+	&__item {
+		background-color: rgb(255, 255, 255);
+		width: 200px;
+		height: 200px;
+		border: 2px solid #fff;
+		border-radius: 15%;
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+
+	&__range {
+		width: 150px;
+		align-self: center;
+	}
+}
+
+.temp {
+	padding: 20px;
+}

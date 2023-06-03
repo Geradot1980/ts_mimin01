@@ -1,0 +1,61 @@
+// Обнуление стилей 1.0
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 16px;
+	// ПО УМОЛЧАНИю
+}
+
+body {
+	line-height: 1;
+	/* обнуляем межстрочный интервал */
+}
+
+.wrapper {
+	min-height: 100%;
+	/* нужно для позиционирования футеров и прочего */
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Окончание блока обнуление стилей */
